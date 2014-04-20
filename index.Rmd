@@ -1,0 +1,66 @@
+---
+title       : Neural Networks
+subtitle    : A really brief firehosing
+author      : Tommy Shen
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : prettify  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+---
+```{r, echo=FALSE, cache=TRUE}
+```
+## Neural Nets
+Neural Nets are cool.  Placeholder.
+
+---&twocol w1:60% w2:40%
+## A more challenging problem
+*** left
+
+```{r, echo=FALSE, fig.height=7, fig.width=7}
+plot(range(-0.2, 1.2), range(-0.2, 1.2), type='n', xlab="dimension a", ylab="dimension b")
+points(c(0,1), c(0,1), col='dark green', pch=16, cex=3)
+points(c(1,0), c(0,1), col='dark red', pch=16, cex=3)
+```
+
+*** right
+
+- How would we classify this problem with the methodologies we've learned thus far?
+  * KNN
+  * Naive Bayes
+  * Regression
+  * Trees
+
+--- 
+## This is a neuron
+![Image](./images/neuron.gif)
+
+---
+## Modeling A Neuron
+```{r, echo=FALSE, fig.height=8, fig.width=13}
+par(mar=c(2,2,0.5,1))
+plot(range(0, 20), range(0, 14), type='n', axes=FALSE, frame.plot=TRUE, xlab='', ylab='')
+symbols(10, 7, circles=3, bg="white", fg="dark red", add=TRUE, lwd=4)
+
+```
+---
+## Add some dendrites
+```{r, echo=FALSE, fig.height=8, fig.width=13}
+par(mar=c(2,2,0.5,1))
+plot(range(0, 20), range(0, 14), type='n', axes=FALSE, frame.plot=TRUE, xlab='', ylab='')
+symbols(10, 7, circles=3, bg="white", fg="dark red", add=TRUE, lwd=4)
+arrows(c(2,2,2), c(2,7,12), c(7.8, 7.8, 7.8), c(5.0, 7, 9.0), lwd=3)
+
+```
+
+---
+## And the axon/axon terminal
+
+```{r, echo=FALSE, fig.height=8, fig.width=13}
+par(mar=c(2,2,0.5,1))
+plot(range(0, 20), range(0, 14), type='n', axes=FALSE, frame.plot=TRUE, xlab='', ylab='')
+symbols(10, 7, circles=3, bg="white", fg="dark red", add=TRUE, lwd=4)
+arrows(c(2,2,2,13), c(2,7,12,7), c(7.8, 7.8, 7.8, 18), c(5.0, 7, 9.0, 7), lwd=3)
+
+```
