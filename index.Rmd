@@ -8,12 +8,6 @@ highlighter : prettify  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
----
-```{r, echo=FALSE, cache=TRUE}
-```
-## Neural Nets
-Neural Nets are cool.  Placeholder.
-
 ---&twocol w1:60% w2:40%
 ## A more challenging problem
 *** left
@@ -33,6 +27,18 @@ points(c(1,0), c(0,1), col='dark red', pch=16, cex=3)
   * Trees
 
 --- 
+## Gateway to Complex Modeling
+Neural nets (or neural networks) are computational models patterened after the biological processes of the brain, specifically neurons.
+
+Neural networks allow for the modeling of complex patterns due to its ability to create deep architectures. (*Spoiler: More to come in deep learning talk.*)
+
+Neural networks come in many learning paradigms:
+- supervised 
+- unsupervised
+- reinforcement
+
+---
+
 ## This is a neuron
 ![Image](./images/neuron.gif)
 

@@ -8,17 +8,11 @@ highlighter : prettify  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
----
-
-
-## Neural Nets
-Neural Nets are cool.  Placeholder.
-
 ---&twocol w1:60% w2:40%
 ## A more challenging problem
 *** left
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
+![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1.png) 
 
 
 *** right
@@ -30,20 +24,32 @@ Neural Nets are cool.  Placeholder.
   * Trees
 
 --- 
+## Gateway to Complex Modeling
+Neural nets (or neural networks) are computational models patterened after the biological processes of the brain, specifically neurons.
+
+Neural networks allow for the modeling of complex patterns due to its ability to create deep architectures. (*Spoiler: More to come in deep learning talk.*)
+
+Neural networks come in many learning paradigms:
+- supervised 
+- unsupervised
+- reinforcement
+
+---
+
 ## This is a neuron
 ![Image](./images/neuron.gif)
 
 ---
 ## Modeling A Neuron
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
 
 ---
 ## Add some dendrites
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
 
 
 ---
 ## And the axon/axon terminal
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
 
