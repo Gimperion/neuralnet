@@ -70,3 +70,19 @@ symbols(10, 7, circles=3, bg="white", fg="dark red", add=TRUE, lwd=4)
 arrows(c(2,2,2,13), c(2,7,12,7), c(7.8, 7.8, 7.8, 18), c(5.0, 7, 9.0, 7), lwd=3)
 
 ```
+## Add some math!
+
+```{r, echo=FALSE, fig.height=8, fig.width=13}
+par(mar=c(2,2,0.5,1))
+plot(range(0, 20), range(0, 14), type='n', axes=FALSE, frame.plot=TRUE, xlab='', ylab='')
+symbols(10, 7, circles=3, bg="white", fg="dark red", add=TRUE, lwd=4)
+arrows(c(2,2,2,13), c(2,7,12,7), c(7.8, 7.8, 7.8, 18), c(5.0, 7, 9.0, 7), lwd=3)
+# x labels
+text(c(1.7,1.7,1.7), c(2,7,12), labels=c(expression(x[1]), expression(x[2]), expression(x[3])))
+text(c(5,5,5),c(3.5,7.2,10.5), labels=c(expression(w[1]), expression(w[2]), expression(w[3])))
+text(10,7, labels=expression(theta(w[i]*X)))
+
+```
+
+
+
