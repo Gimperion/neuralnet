@@ -93,7 +93,11 @@
     <h2>This is a neuron</h2>
   </hgroup>
   <article>
-    <p><img src="./images/neuron.gif" alt="Image" title="webspace.ship.edu"></p>
+    <p><img src="./images/neuron.gif" alt="Image"></p>
+
+<div class='source'>
+  Source: <a href='webspace.ship.edu'>Picture from webspace.ship.edu</a>
+</div>
 
   </article>
   <!-- Presenter Notes -->
@@ -148,13 +152,73 @@
     <h2>Nodes forming a network</h2>
   </hgroup>
   <article>
-    <p><img src="./images/neural_network_1.png" alt="Image" title="www.astroml.org"></p>
+    <p><img src="./images/neural_network_1.png" alt="Image"></p>
+
+<div class='source'>
+  Source: <a href='www.astroml.org'>Picture from www.astroml.org</a>
+</div>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
       <slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Neuron Activation Functions</h2>
+  </hgroup>
+  <article>
+    <style>
+.MathJax_Display {
+  margin: 0em !important; 
+}
+</style>
+
+<ol>
+<li><p>Linear Neurons: <font size='34px' color=#00000>\[y=b+\sum_{i} x_{i} w_{i}\]</font></p></li>
+<li><p>Binary Threshold Neurons: <font size='34px' color=#00000 margin-top='0'>\[
+z = \sum x_{i} w_{i}\\
+y =
+\begin{cases}
+1   & z \geq \theta \\
+0              & \text{otherwise}
+\end{cases}\]</font></p></li>
+<li><p>Rectified Linear Neurons: <font size='34px' color=#00000 margin-top='0'>\[
+y =
+\begin{cases}
+z   & z \geq \theta \\
+0              & \text{otherwise}
+\end{cases}\]</font></p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>More on Binary Threshold Neurons</h2>
+  </hgroup>
+  <article>
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p>Binary threshold is the most common choice for modeling individual neuron nodes.</p>
+
+<ul>
+<li>A sigmoid distribution is often used to model the activation function.  This is the same function used in logistic regression.</li>
+<li>A binary threshold neuron passes a 0 or 1 value to the next layer depending on whether the activation threshold had been met.</li>
+</ul>
+
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="figure/unnamed-chunk-6.png" alt="plot of chunk unnamed-chunk-6"> </p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-11" style="background:;">
   <hgroup>
     <h2>Back to our XNOR problem</h2>
   </hgroup>
@@ -164,18 +228,19 @@ inputs$XNOR &lt;- ifelse(inputs$A == inputs$B, 1, 0)
 net.xnor &lt;- neuralnet(XNOR~A+B, data=inputs, hidden=2, rep=10)
 </code></pre>
 
-<p><img src="figure/unnamed-chunk-6.png" alt="plot of chunk unnamed-chunk-6"> </p>
+<p><img src="figure/unnamed-chunk-7.png" alt="plot of chunk unnamed-chunk-7"> </p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-10" style="background:;">
+      <slide class="" id="slide-12" style="background:;">
   <hgroup>
-    
+    <h2>HALP!!</h2>
   </hgroup>
   <article>
-    
+    <p>I needs more material??</p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -194,6 +259,20 @@ net.xnor &lt;- neuralnet(XNOR~A+B, data=inputs, hidden=2, rep=10)
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
 <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery-1.7.min.js"><\/script>')</script>
 <!-- Load Javascripts for Widgets -->
+<!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
 <!-- Google Prettify -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
 <script src='libraries/highlighters/prettify/js/lang-r.js'></script>
