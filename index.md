@@ -79,9 +79,9 @@ Neural networks come in many learning paradigms:
   margin: 0em !important; 
 }
 </style>
-1. Linear Neurons: <font size='30px' color=#00000>$$y=b+\sum_{i} x_{i} w_{i}$$</font>
+1. Linear Neurons: <font size='28px' color=#00000>$$y=b+\sum_{i} x_{i} w_{i}$$</font>
 
-2. Binary Threshold Neurons: <font size='30px' color=#00000 margin-top='0'>$$
+2. Binary Threshold Neurons: <font size='28px' color=#00000 margin-top='0'>$$
 z = \sum x_{i} w_{i}\\
 y =
 \begin{cases}
@@ -89,7 +89,7 @@ y =
     0              & \text{otherwise}
 \end{cases}$$</font>
 
-3. Rectified Linear Neurons: <font size='30px' color=#00000 margin-top='0'>$$
+3. Rectified Linear Neurons: <font size='28px' color=#00000 margin-top='0'>$$
 y =
 \begin{cases}
     z   & z \geq \theta \\
