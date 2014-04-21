@@ -75,26 +75,36 @@ Neural networks come in many learning paradigms:
 ---
 ## Neuron Activation Functions
 <style>
-.MathJax_Display {
-  margin: 0em !important; 
+p {
+  margin-top: 1.0em !important;
 }
-</style>
-1. Linear Neurons: <font size='28px' color=#00000>$$y=b+\sum_{i} x_{i} w_{i}$$</font>
+.MathJax_Display {
+  margin: 0em 0em 1em !important;
+}
 
-2. Binary Threshold Neurons: <font size='28px' color=#00000 margin-top='0'>$$
-z = \sum x_{i} w_{i}\\
+.math span{
+  font-size: 100% !important;
+  color: #000000;
+}
+
+</style>
+1. Linear Neurons: 
+$$y = b + \sum_{i} x_{i} w_{i}$$
+
+2. Binary Threshold Neurons: 
+$$z = \sum x_{i} w_{i}\\
 y =
 \begin{cases}
     1   & z \geq \theta \\
     0              & \text{otherwise}
-\end{cases}$$</font>
+\end{cases}$$
 
-3. Rectified Linear Neurons: <font size='28px' color=#00000 margin-top='0'>$$
-y =
+3. Rectified Linear Neurons:
+$$y =
 \begin{cases}
     z   & z \geq \theta \\
     0              & \text{otherwise}
-\end{cases}$$</font>
+\end{cases}$$
 
 ---&twocol w1:50% w2:50%
 ## More on Binary Threshold Neurons
@@ -124,6 +134,10 @@ net.xnor <- neuralnet(XNOR~A+B, data=inputs, hidden=2, rep=10)
 
 
 ---
+## Show examples:
+Auto learning of driving
+Auto targeting of 
+
 ## HALP!!
 I needs more material??
 
