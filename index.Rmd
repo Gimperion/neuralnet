@@ -40,14 +40,14 @@ Neural networks come in many learning paradigms:
 ---
 
 ## This is a neuron
-![Image](./images/neuron.gif)
+![Image](./images/neuron.gif "webspace.ship.edu")
 
 ---
 ## Modeling A Neuron
 ```{r, echo=FALSE, fig.height=8, fig.width=13}
 par(mar=c(2,2,0.5,1))
 plot(range(0, 20), range(0, 14), type='n', axes=FALSE, frame.plot=TRUE, xlab='', ylab='')
-symbols(10, 7, circles=3, bg="white", fg="dark red", add=TRUE, lwd=4)
+symbols(10, 7, circles=3.1, bg="white", fg="dark red", add=TRUE, lwd=4)
 
 ```
 ---
@@ -55,7 +55,7 @@ symbols(10, 7, circles=3, bg="white", fg="dark red", add=TRUE, lwd=4)
 ```{r, echo=FALSE, fig.height=8, fig.width=13}
 par(mar=c(2,2,0.5,1))
 plot(range(0, 20), range(0, 14), type='n', axes=FALSE, frame.plot=TRUE, xlab='', ylab='')
-symbols(10, 7, circles=3, bg="white", fg="dark red", add=TRUE, lwd=4)
+symbols(10, 7, circles=3.1, bg="white", fg="dark red", add=TRUE, lwd=4)
 arrows(c(2,2,2), c(2,7,12), c(7.8, 7.8, 7.8), c(5.0, 7, 9.0), lwd=3)
 
 ```
@@ -66,23 +66,38 @@ arrows(c(2,2,2), c(2,7,12), c(7.8, 7.8, 7.8), c(5.0, 7, 9.0), lwd=3)
 ```{r, echo=FALSE, fig.height=8, fig.width=13}
 par(mar=c(2,2,0.5,1))
 plot(range(0, 20), range(0, 14), type='n', axes=FALSE, frame.plot=TRUE, xlab='', ylab='')
-symbols(10, 7, circles=3, bg="white", fg="dark red", add=TRUE, lwd=4)
+symbols(10, 7, circles=3.1, bg="white", fg="dark red", add=TRUE, lwd=4)
 arrows(c(2,2,2,13), c(2,7,12,7), c(7.8, 7.8, 7.8, 18), c(5.0, 7, 9.0, 7), lwd=3)
 
 ```
+
+---
 ## Add some math!
 
 ```{r, echo=FALSE, fig.height=8, fig.width=13}
 par(mar=c(2,2,0.5,1))
 plot(range(0, 20), range(0, 14), type='n', axes=FALSE, frame.plot=TRUE, xlab='', ylab='')
-symbols(10, 7, circles=3, bg="white", fg="dark red", add=TRUE, lwd=4)
-arrows(c(2,2,2,13), c(2,7,12,7), c(7.8, 7.8, 7.8, 18), c(5.0, 7, 9.0, 7), lwd=3)
-# x labels
-text(c(1.7,1.7,1.7), c(2,7,12), labels=c(expression(x[1]), expression(x[2]), expression(x[3])))
-text(c(5,5,5),c(3.5,7.2,10.5), labels=c(expression(w[1]), expression(w[2]), expression(w[3])))
-text(10,7, labels=expression(theta(w[i]*X)))
+symbols(10, 7, circles=3.1, bg="white", fg="dark red", add=TRUE, lwd=4)
+arrows(c(2,2,2,13, 10), c(2,7,12,7, 10.8), c(7.8, 7.8, 7.8, 18, 10), c(5.0, 7, 9.0, 7, 9.4), lwd=3)
+text(c(1.6,1.6,1.6), c(2,7,12), labels=c(expression(x[3]), expression(x[2]), expression(x[1])), cex=2.5)
+text(c(5,5,5, 15.2, 10),c(4,7.5,11, 7.5, 11.5), labels=c(expression(w[3]), expression(w[2]), expression(w[1]), "output (y)", expression(paste("Bias ", theta))), cex=2.5)
+text(10,7, labels=expression(f(w[i]*x[i])), cex=2.8)
+text(13, 3, labels=expression(paste('y = ', f(w[i]*x[i]) + theta)), cex=2.5)
+```
+---
+## Nodes forming a network
+![Image](./images/neural_network_1.png "www.astroml.org")
+
+---
+## Back to our XNOR problem
+```{r, echo=2:4, message=FALSE, fig.height=7.5, fig.width=11, tidy=FALSE, cache=TRUE}
+library(neuralnet)
+inputs <- data.frame(A=sample(c(0,1), 100,replace=TRUE),B=sample(c(0,1), 100, replace=TRUE))
+inputs$XNOR <- ifelse(inputs$A == inputs$B, 1, 0)
+net.xnor <- neuralnet(XNOR~A+B, data=inputs, hidden=2, rep=10)
+par(mar=c(4,2,0,1))
+plot(net.xnor, rep='best', cex=1.6)
 
 ```
 
-
-
+---

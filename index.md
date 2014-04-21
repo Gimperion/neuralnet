@@ -37,7 +37,7 @@ Neural networks come in many learning paradigms:
 ---
 
 ## This is a neuron
-![Image](./images/neuron.gif)
+![Image](./images/neuron.gif "webspace.ship.edu")
 
 ---
 ## Modeling A Neuron
@@ -53,3 +53,26 @@ Neural networks come in many learning paradigms:
 
 ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
 
+
+---
+## Add some math!
+
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+
+---
+## Nodes forming a network
+![Image](./images/neural_network_1.png "www.astroml.org")
+
+---
+## Back to our XNOR problem
+
+```r
+inputs <- data.frame(A=sample(c(0,1), 100,replace=TRUE),B=sample(c(0,1), 100, replace=TRUE))
+inputs$XNOR <- ifelse(inputs$A == inputs$B, 1, 0)
+net.xnor <- neuralnet(XNOR~A+B, data=inputs, hidden=2, rep=10)
+```
+
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
+
+
+---
