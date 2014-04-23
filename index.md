@@ -1,6 +1,6 @@
 ---
 title       : Neural Networks
-subtitle    : A really brief firehosing
+subtitle    : A really brief introduction
 author      : Tommy Shen
 job         : 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -134,10 +134,24 @@ net.xnor <- neuralnet(XNOR~A+B, data=inputs, hidden=2, rep=10)
 
 
 ---
-## Show examples:
-Auto learning of driving
-Auto targeting of 
+## Application of Neural Nets
 
-## HALP!!
-I needs more material??
+Neural Networks excels at recognizing complex patterns and adapting to non-linear relationships.
+
+- Handwriting Analysis 
+  - [Yann Lecun's LeNet-5](http://yann.lecun.com/exdb/lenet/index.html)
+  - [Kaggle Digit Recognizer Contest](http://www.kaggle.com/c/digit-recognizer)
+- Self-Driving Vehicles 
+  - [ALVINN](http://ftp.utcluj.ro/pub/docs/imaging/Autonomous_driving/Articole%20sortate/CThorpe/ALVINN%20Project%20Home%20Page.htm)
+  - [David Singleton NNRCAR](http://blog.davidsingleton.org/nnrccar/)
+- Image/Voice Recognition (Deep Learning)
+- Lots more!
+
+---
+## Additional Resources
+
+- Ryan Harris's Video on Back Propagation [Part1](https://www.youtube.com/watch?v=aVId8KMsdUU) and [Part2](https://www.youtube.com/watch?v=zpykfC4VnpM)
+- Wikipedia Rocks [Artificial Neural Network](http://en.wikipedia.org/wiki/Artificial_neural_network)
+- Geoffrey Hinton's Class on [Neural Networks for Machine Learning](https://class.coursera.org/neuralnets-2012-001)
+
 
